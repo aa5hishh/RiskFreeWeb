@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RiskFreeWeb | Security Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>🛡 RiskFreeWeb</h2>
+    <p class="side-label">SECURITY CENTER</p>
+
+    <a href="#dashboard">▦ Dashboard</a>
+    <a href="#scanner">⌕ URL Scanner</a>
+    <a href="#statistics">▤ Statistics</a>
+    <a href="#chart-section">◉ Risk Distribution</a>
+    <a href="#history-section">◷ Scan History</a>
+    <a href="#tips">ⓘ Safety Tips</a>
+
+    <div class="side-footer">
+      Cyber Safety<br>
+      <span>Stay alert. Stay safe.</span>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="content" id="dashboard">
+
+    <header>
+      <div>
+        <h1>Security Dashboard</h1>
+        <p>Phishing URL Detection &amp; Cyber Safety</p>
+      </div>
+      <span class="status">● Protection Active</span>
+    </header>
+
+    <main>
+
+      <!-- URL Scanner -->
+      <section class="scanner" id="scanner">
+        <h2>🔎 Scan a Website URL</h2>
+        <p>Check a URL for suspicious characteristics.</p>
+
+        <form id="scanForm">
+          <input
+            id="url"
+            type="text"
+            placeholder="Enter URL, e.g. https://example.com"
+            required
+          >
+          <button type="submit">Scan URL →</button>
+        </form>
+
+        <div id="result"></div>
+      </section>
+
+      <!-- Statistics -->
+      <section class="stats" id="statistics">
+
+        <div class="card">
+          <h3>Total Scans</h3>
+          <p id="total">0</p>
+        </div>
+
+        <div class="card">
+          <h3>High Risk</h3>
+          <p id="high">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Medium Risk</h3>
+          <p id="medium">0</p>
+        </div>
+
+        <div class="card">
+          <h3>Low Risk</h3>
+          <p id="low">0</p>
+        </div>
+
+      </section>
+
+      <!-- Risk Chart -->
+      <section class="card" id="chart-section">
+        <h2>Risk Distribution</h2>
+        <p>Overview of your scanned URLs.</p>
+
+        <div class="chart-box">
+          <canvas id="riskChart"></canvas>
+        </div>
+      </section>
+
+      <!-- Scan History -->
+      <section class="history" id="history-section">
+        <h2>Recent Scans</h2>
+        <ul id="history"></ul>
+      </section>
+
+      <!-- Safety Tips -->
+      <section class="tips" id="tips">
+        <h2>🛡 Cyber Safety Tips</h2>
+        <p>✓ Check website spelling carefully.</p>
+        <p>✓ Avoid unexpected login links.</p>
+        <p>✓ Never share passwords through suspicious links.</p>
+        <p>✓ Check the domain before entering personal information.</p>
+      </section>
+
+    </main>
+
+    <footer>
+      RiskFreeWeb · Educational URL Risk Analysis
+    </footer>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
